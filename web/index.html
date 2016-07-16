@@ -5,17 +5,16 @@
 		<link rel="stylesheet" type="text/css" href="https://christopher2012.github.io/test/css/style.css" />
 		<link rel="stylesheet" type="text/css" href="https://christopher2012.github.io/test/css/font-awesome.css" />
 		<script type="text/javascript">
-			function httpGetAsync(theUrl, callback) {
+			function httpGetAsync(theUrl) {
 				var xmlHttp = new XMLHttpRequest();
 				xmlHttp.onreadystatechange = function() {
 					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-						callback(xmlHttp.responseText);
+						console.log(xmlHttp.responseText);
 				};
 				xmlHttp.open("GET", theUrl, true);
 				xmlHttp.send(null);
 			}
 		</script>
-		<script type="text/javascript" src="https://christopher2012.github.io/LightControlESP/web/js/scripts.js" />
 	</head>
 	<body>
 		<div class="container">
