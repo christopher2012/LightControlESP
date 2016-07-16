@@ -2,9 +2,20 @@
 <html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
-		<link rel="stylesheet" type="text/css" href="http://christopher2012.github.io/test/css/style.css" />
-		<link rel="stylesheet" type="text/css" href="http://christopher2012.github.io/test/css/font-awesome.css" />
-		<script type="text/javascript" src="js/scripts.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://christopher2012.github.io/test/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="https://christopher2012.github.io/test/css/font-awesome.css" />
+		<link type="text/javascript" src="https://christopher2012.github.io/LightControlESP/web/js/scripts.js" />
+		<script type="text/javascript">
+			function httpGetAsync(theUrl, callback) {
+				var xmlHttp = new XMLHttpRequest();
+				xmlHttp.onreadystatechange = function() {
+					if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+						callback(xmlHttp.responseText);
+				};
+				xmlHttp.open("GET", theUrl, true);
+				xmlHttp.send(null);
+			}
+		</script>
 	</head>
 	<body>
 		<div class="container">
